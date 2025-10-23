@@ -182,6 +182,9 @@
     can be found.
   -->
   <ItemGroup>
+    <Compile Include="Cleanup\Model\ISlideMasterCleanup.cs" />
+    <Compile Include="Cleanup\Model\SlideMasterCleanup.cs" />
+    <Compile Include="Cleanup\SlideMaster.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
