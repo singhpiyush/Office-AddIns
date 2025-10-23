@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<customUI xmlns="http://schemas.microsoft.com/office/2009/07/customui" onLoad="Ribbon_Load">
+  <ribbon>
+    <tabs>
+			<tab id="Utility" label="Utility" insertAfterMso="TabView">
+				<group id="MyGroup">
+					<button id="btnSlideMaster" label="Clean Slide Master" screentip="Remove unused slides from Slide Master" onAction="OnButtonClick" size="large"/>
+				</group>
+      </tab>
+    </tabs>
+  </ribbon>
+</customUI>
+
