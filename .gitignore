@@ -1,0 +1,8 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs
+/PowerPoint/VSTO PPT AddIn Clean SlideMaster/.vs/VSTO PPT AddIn Clean SlideMaster.slnx
+/PowerPoint/VSTO PPT AddIn Clean SlideMaster/VSTO PPT AddIn Clean SlideMaster/bin/Debug
+/PowerPoint/VSTO PPT AddIn Clean SlideMaster/VSTO PPT AddIn Clean SlideMaster/obj/Debug
