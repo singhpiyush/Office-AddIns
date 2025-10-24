@@ -86,10 +86,10 @@ namespace VSTO_PPT_AddIn_Clean_SlideMaster
 
         #region Custom
 
-        public async Task OnButtonClick(IRibbonControl ribbonControl)
+        public void OnRemoveSlidesClick(IRibbonControl ribbonControl)
         {
             //MessageBox.Show("Ribbon", "Ribbon");
-            await (new SlideMaster()).Delete();
+            (new SlideMaster()).Delete();
         }
 
         #endregion

@@ -4,7 +4,7 @@
     <tabs>
 			<tab id="Utility" label="Utility" insertAfterMso="TabView">
 				<group id="MyGroup">
-					<button id="btnSlideMaster" label="Clean Slide Master" screentip="Remove unused slides from Slide Master" onAction="OnButtonClick" size="large"/>
+					<button id="btnSlideMaster" label="Clean Slide Master" screentip="Remove unused slides from Slide Master" onAction="OnRemoveSlidesClick" size="large"/>
 				</group>
       </tab>
     </tabs>
