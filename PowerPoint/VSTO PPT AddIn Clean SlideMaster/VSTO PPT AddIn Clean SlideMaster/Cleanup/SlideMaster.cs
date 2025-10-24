@@ -88,34 +88,9 @@ namespace VSTO_PPT_AddIn_Clean_SlideMaster.Cleanup
 
             try
             {
-                // Delete unused custom layouts
-                foreach (CustomLayout layout in unUsedlayouts)
-                {
-                    try
-                    {
-                        deleteSlideCount++;
-                        layout.Delete();
-                    }
-                    catch (COMException) { }
-                    finally
-                    {
-                        ReleaseComObjectSafe(layout);
-                    }
-                }
+                deleteSlideCount = DeleteUnUsedCustomLayouts(unUsedlayouts);
 
-                // Delete unused masters
-                foreach (Master master in unUsedMaster)
-                {
-                    try
-                    {
-                        master.Delete();
-                    }
-                    catch (COMException) { }
-                    finally
-                    {
-                        ReleaseComObjectSafe(master);
-                    }
-                }
+                DeleteUnUsedMasterSlides(unUsedMaster);
 
 
                 // Save the presentation after modifications    
@@ -132,6 +107,54 @@ namespace VSTO_PPT_AddIn_Clean_SlideMaster.Cleanup
             double finalSize = GetFileSize();
 
             MessageBox.Show($"Done {Environment.NewLine}Previous size: {initialSize}MB{Environment.NewLine}New Size: {finalSize}MB{Environment.NewLine}Total slides deleted: {deleteSlideCount}", "Slide Master Delete Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        /// <summary>
+        /// Deletes the unused custom layouts
+        /// </summary>
+        /// <param name="unUsedlayouts">A collection of CustomLayout. All of these will be deleted.</param>
+        /// <returns>Count of number of slides which are deleted</returns>
+        private int DeleteUnUsedCustomLayouts(IReadOnlyList<CustomLayout> unUsedlayouts)
+        {
+            int deleteSlideCount = 0;
+
+            // Delete unused custom layouts
+            foreach (CustomLayout layout in unUsedlayouts)
+            {
+                try
+                {
+                    deleteSlideCount++;
+                    layout.Delete();
+                }
+                catch (COMException) { }
+                finally
+                {
+                    ReleaseComObjectSafe(layout);
+                }
+            }
+
+            return deleteSlideCount;
+        }
+
+        /// <summary>
+        /// Deletes the unused master slides
+        /// </summary>
+        /// <param name="unUsedMaster">A collection of SlideMaster. All of these will be deleted.</param>
+        private void DeleteUnUsedMasterSlides(IReadOnlyList<Master> unUsedMaster)
+        {
+            // Delete unused masters
+            foreach (Master master in unUsedMaster)
+            {
+                try
+                {
+                    master.Delete();
+                }
+                catch (COMException) { }
+                finally
+                {
+                    ReleaseComObjectSafe(master);
+                }
+            }
         }
 
         /// <summary>
