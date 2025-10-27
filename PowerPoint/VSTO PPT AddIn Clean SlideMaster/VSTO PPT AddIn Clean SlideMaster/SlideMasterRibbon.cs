@@ -1,6 +1,7 @@
 ﻿using Microsoft.Office.Core;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Reflection;
@@ -90,6 +91,11 @@ namespace VSTO_PPT_AddIn_Clean_SlideMaster
         {
             //MessageBox.Show("Ribbon", "Ribbon");
             (new SlideMaster()).Delete();
+        }
+
+        public Image GetImage(string imageName)
+        {
+            return (Image)Properties.Resources.ResourceManager.GetObject(imageName);
         }
 
         #endregion
