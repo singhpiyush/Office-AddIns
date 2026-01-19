@@ -21,13 +21,13 @@ jobs:
     runs-on: windows-latest
 
     env:
-      SOLUTION_FILE: VSTO PPT AddIn Clean SlideMaster.slnx
-      PROJECT_DIR: PowerPoint/VSTO PPT AddIn Clean SlideMaster
+      SOLUTION_FILE: "VSTO PPT AddIn Clean SlideMaster.slnx"
+      PROJECT_DIR: "PowerPoint/VSTO PPT AddIn Clean SlideMaster"
       CONFIGURATION: Release
 
-      OUT_DIR: PowerPoint/VSTO PPT AddIn Clean SlideMaster/VSTO PPT AddIn Clean SlideMaster/bin/Release
-      APP_MANIFEST: PowerPoint/VSTO PPT AddIn Clean SlideMaster/VSTO PPT AddIn Clean SlideMaster/bin/Release/VSTO PPT AddIn Clean SlideMaster.dll.manifest
-      DEPLOY_MANIFEST: PowerPoint/VSTO PPT AddIn Clean SlideMaster/VSTO PPT AddIn Clean SlideMaster/bin/Release/VSTO PPT AddIn Clean SlideMaster.vsto
+      OUT_DIR: "PowerPoint/VSTO PPT AddIn Clean SlideMaster/VSTO PPT AddIn Clean SlideMaster/bin/Release"
+      APP_MANIFEST: "PowerPoint/VSTO PPT AddIn Clean SlideMaster/VSTO PPT AddIn Clean SlideMaster/bin/Release/VSTO PPT AddIn Clean SlideMaster.dll.manifest"
+      DEPLOY_MANIFEST: "PowerPoint/VSTO PPT AddIn Clean SlideMaster/VSTO PPT AddIn Clean SlideMaster/bin/Release/VSTO PPT AddIn Clean SlideMaster.vsto"
 
 
 
