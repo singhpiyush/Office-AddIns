@@ -21,8 +21,8 @@ jobs:
     runs-on: windows-latest
 
     env:
-      SOLUTION_FILE: "VSTO PPT AddIn Clean SlideMaster.slnx"
-      PROJECT_DIR: "PowerPoint/VSTO PPT AddIn Clean SlideMaster"
+      SOLUTION_FILE: "PowerPoint/VSTO PPT AddIn Clean SlideMaster/VSTO PPT AddIn Clean SlideMaster.slnx"
+      PROJECT_DIR: "PowerPoint/VSTO PPT AddIn Clean SlideMaster/VSTO PPT AddIn Clean SlideMaster"
       CONFIGURATION: Release
 
       OUT_DIR: "PowerPoint/VSTO PPT AddIn Clean SlideMaster/VSTO PPT AddIn Clean SlideMaster/bin/Release"
