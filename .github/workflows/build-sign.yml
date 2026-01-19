@@ -21,13 +21,13 @@ jobs:
     runs-on: windows-latest
 
     env:
-      SOLUTION_FILE: "PowerPoint/VSTO PPT AddIn Clean SlideMaster/VSTO PPT AddIn Clean SlideMaster.slnx"
-      PROJECT_DIR: "PowerPoint/VSTO PPT AddIn Clean SlideMaster/VSTO PPT AddIn Clean SlideMaster"
+      SOLUTION_FILE: "./PowerPoint/VSTO PPT AddIn Clean SlideMaster/VSTO PPT AddIn Clean SlideMaster.slnx"
+      PROJECT_DIR: "./PowerPoint/VSTO PPT AddIn Clean SlideMaster/VSTO PPT AddIn Clean SlideMaster"
       CONFIGURATION: Release
 
-      OUT_DIR: "PowerPoint/VSTO PPT AddIn Clean SlideMaster/VSTO PPT AddIn Clean SlideMaster/bin/Release"
-      APP_MANIFEST: "PowerPoint/VSTO PPT AddIn Clean SlideMaster/VSTO PPT AddIn Clean SlideMaster/bin/Release/VSTO PPT AddIn Clean SlideMaster.dll.manifest"
-      DEPLOY_MANIFEST: "PowerPoint/VSTO PPT AddIn Clean SlideMaster/VSTO PPT AddIn Clean SlideMaster/bin/Release/VSTO PPT AddIn Clean SlideMaster.vsto"
+      OUT_DIR: "./PowerPoint/VSTO PPT AddIn Clean SlideMaster/VSTO PPT AddIn Clean SlideMaster/bin/Release"
+      APP_MANIFEST: "./PowerPoint/VSTO PPT AddIn Clean SlideMaster/VSTO PPT AddIn Clean SlideMaster/bin/Release/VSTO PPT AddIn Clean SlideMaster.dll.manifest"
+      DEPLOY_MANIFEST: "./PowerPoint/VSTO PPT AddIn Clean SlideMaster/VSTO PPT AddIn Clean SlideMaster/bin/Release/VSTO PPT AddIn Clean SlideMaster.vsto"
 
 
 
@@ -46,8 +46,8 @@ jobs:
       - name: where am I and what’s here?
         run: |
           Write-Host "PWD =" (Get-Location)
-          Get-ChildItem -Recurse -Filter *.sln | Select-Object FullName
-          Get-ChildItem -Recurse -Filter *.csproj | Select-Object FullName
+          Write-Host Get-ChildItem -Recurse -Filter *.slnx | Select-Object FullName
+          Write-Host Get-ChildItem -Recurse -Filter *.csproj | Select-Object FullName
 
 
       - name: Build (strong-name happens via project settings)
