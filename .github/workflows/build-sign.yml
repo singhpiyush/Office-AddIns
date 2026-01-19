@@ -44,7 +44,9 @@ jobs:
         uses: microsoft/setup-msbuild@v2
 
       - name: Build (strong-name happens via project settings)
-        run: msbuild $Env:SOLUTION_FILE /p:Configuration=$Env:CONFIGURATION /m
+        run: |
+          echo $Env:SOLUTION_FILE /p:Configuration=$Env:CONFIGURATION /m
+          msbuild $Env:SOLUTION_FILE /p:Configuration=$Env:CONFIGURATION /m
 
 
 
